@@ -1,0 +1,17 @@
+class Solution {
+    public int findNumbers(int[] nums) {       
+        int evenums=0;       
+        for (int i = 0; i<nums.length; i++){
+            int digits = 0;
+            int x = nums[i];
+            while (x!=0){
+                x=x/10;
+                digits +=1;
+            }
+            if (digits%2==0){
+                evenums+=1; 
+            }                  
+        }
+        return evenums; 
+    }    
+}
